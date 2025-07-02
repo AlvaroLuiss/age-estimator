@@ -1,5 +1,5 @@
-export async function load({  fetch }) {
-  const name = 'alvaro'
+export async function load({  url, fetch }) {
+  	const name = url.searchParams.get('name')?.trim();
 
   if (!name) {
     return {name: '', result: null};
